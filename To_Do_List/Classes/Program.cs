@@ -4,13 +4,14 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using To_Do_List;
 
-namespace Task_Manager
+namespace To_Do_List
 {
-     delegate bool action(Task_Mangment_System Sys,int TaskNumber);
+    delegate bool action(Task_Mangment_System Sys, int TaskNumber);
     internal class Program
     {
-       
+
         public static void Print_Choices()
         {
             Console.WriteLine("Welcom ");
@@ -23,19 +24,19 @@ namespace Task_Manager
             Console.WriteLine("[6] Completed Tasks ");
             Console.WriteLine("[7] Exist ");
             Console.WriteLine("---------------------");
-            
+
         }
 
-        public static void Implement_Choice(Task_Mangment_System task_Mangment_System,int choice)
+        public static void Implement_Choice(Task_Mangment_System task_Mangment_System, int choice)
         {
-            
-            
+
+
             switch (choice)
             {
                 case 1:
                     {
                         Console.Clear();
-                        Print_Tasks_Screen.Print_Tasks(task_Mangment_System.Tasks,"UnComeleted Tasks ","Adding");
+                        Print_Tasks_Screen.Print_Tasks(task_Mangment_System.Tasks, "UnComeleted Tasks ", "Adding");
                         break;
                     }
                 case 2:
@@ -47,7 +48,7 @@ namespace Task_Manager
                 case 3:
                     {
                         Console.Clear();
-                        DealwithTask_Screen.Show_DealwithTask_Screen(Complete_Task,task_Mangment_System, "Complete Task Screen");
+                        DealwithTask_Screen.Show_DealwithTask_Screen(Complete_Task, task_Mangment_System, "Complete Task Screen");
                         FileHandler.Save_Changes(task_Mangment_System.Tasks);
                         break;
                     }
@@ -69,13 +70,14 @@ namespace Task_Manager
                 case 6:
                     {
                         Console.Clear();
-                        Print_Tasks_Screen.Print_Tasks(FileHandler.Get_Tasks_From_File(FileHandler.Completed_Tasks_File), "Completed Tasks","Completing");
+                        Print_Tasks_Screen.Print_Tasks(FileHandler.Get_Tasks_From_File(FileHandler.Completed_Tasks_File), "Completed Tasks", "Completing");
                         break;
                     }
             }
         }
-        public static bool Complete_Task(Task_Mangment_System Sys, int TaskNumber) {
-            return Sys.CompeleteTask(TaskNumber);        
+        public static bool Complete_Task(Task_Mangment_System Sys, int TaskNumber)
+        {
+            return Sys.CompeleteTask(TaskNumber);
         }
         public static bool Remove_Task(Task_Mangment_System Sys, int TaskNumber)
         {
@@ -84,9 +86,15 @@ namespace Task_Manager
 
         public static bool Update_Task(Task_Mangment_System Sys, int TaskNumber)
         {
-            Console.WriteLine("Enter New Task Details :");
-            string NewContent=Console.ReadLine();
-            return Sys.UpdateTask(TaskNumber, NewContent);
+            Console.WriteLine("Entre New Task title : ");
+            string title = Console.ReadLine();
+            Console.WriteLine("Entre Task Details : ");
+            string Details = Console.ReadLine();
+            List<string> list = new List<string>();
+            list.Add(title);
+            list.Add(Details);
+
+            return Sys.UpdateTask(TaskNumber, list);
         }
 
         static void Main(string[] args)
@@ -98,7 +106,7 @@ namespace Task_Manager
                 Console.Clear();
                 Print_Choices();
                 Console.Write("Entre Your Choice : ");
-                option = int.Parse(Console.ReadLine());    
+                option = int.Parse(Console.ReadLine());
                 Implement_Choice(task_Mangment_System, option);
                 if (option == 7) { return; }
 

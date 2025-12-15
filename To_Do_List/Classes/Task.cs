@@ -5,24 +5,26 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task_Manager
+namespace To_Do_List
 {
     internal class Task
     {
-        
-        public string Details;
+
+        public string Title;
+        public string Description;
         public DateTime Time;
-        public Task(string details, DateTime time)
+        public Task(string title,string Description, DateTime time)
         {
-            Details = details;
+            Title = title;
             this.Time = time;
+            this.Description = Description;
 
         }
         public string ToString()
         {
-            
-            return Details + "#" + Time.ToString();
+
+            return Title +"#"+ Description + "#" + Time.ToString();
         }
-        
+
     }
 }
