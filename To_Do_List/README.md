@@ -12,4 +12,6 @@ A simple console-based Task Manager built with C#. Manage your tasks efficiently
 - File-based persistence
 
 ## Video
-<a href="https://www.dropbox.com/scl/fi/2kksp0gl4tavz6om1nuc5/VsDebugConsole_rPlg2Kk63r.mp4?rlkey=iwz7f7smio6g088z0nvuf88hr&dl=0">https://www.dropbox.com/scl/fi/2kksp0gl4tavz6om1nuc5/VsDebugConsole_rPlg2Kk63r.mp4?rlkey=iwz7f7smio6g088z0nvuf88hr&dl=0</a>
+## Video
+
+[Watch Demo Video](https://www.dropbox.com/scl/fi/2kksp0gl4tavz6om1nuc5/VsDebugConsole_rPlg2Kk63r.mp4?rlkey=iwz7f7smio6g088z0nvuf88hr&dl=0)
