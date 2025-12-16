@@ -1,7 +1,0 @@
-D:\C#_Projects\PS\PS\bin\Debug\PS.exe.config
-D:\C#_Projects\PS\PS\bin\Debug\PS.exe
-D:\C#_Projects\PS\PS\bin\Debug\PS.pdb
-D:\C#_Projects\PS\PS\obj\Debug\PS.csproj.AssemblyReference.cache
-D:\C#_Projects\PS\PS\obj\Debug\PS.csproj.CoreCompileInputs.cache
-D:\C#_Projects\PS\PS\obj\Debug\PS.exe
-D:\C#_Projects\PS\PS\obj\Debug\PS.pdb

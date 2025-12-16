@@ -27,7 +27,7 @@ namespace PS
             list.Add("Ali");
             list.Add("Osama");
             list.Add("Mohamed");
-            list.Add("1");
+            list.Add("O");
             string shortest_string = GetShortestString(list);
             Console.WriteLine(shortest_string);
         }
